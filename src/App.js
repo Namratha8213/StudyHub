@@ -5,6 +5,8 @@ import UploadPage from './pages/Upload';
 import ThirdSemesterPage from './pages/Third';
 import FourthSemesterPage from './pages/Fourth';
 import FifthSemesterPage from './pages/Fifth';
+import HomePage from './pages/HomePage';
+
 
 function App() {
   return (
@@ -69,43 +71,7 @@ function App() {
   );
 }
 
-function HomePage() {
-  return (
-    <div>
-      <div className="Front_view" id="home">
-        <div className="content">
-          <div className="main">
-            <h1>Welcome to Our Website</h1>
-            <p>Contains Notes, Textbooks, Software Installation Files, Video Tutorials and pretty much everything</p>
-          </div>
-        </div>
-        <div className="image">
-          <img src="images/svg1.jpg" alt="Front Image" />
-        </div>
-      </div>
-      <hr />
-      <section className="about_sec">
-        <div className="about_box">
-          <h1 id="about" className="about_heading">About US!</h1>
-          <p className="about_para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias vero ut reiciendis, cumque at earum quisquam mollitia iusto ullam, similique recusandae! Dolor labore fuga exercitationem. Distinctio, similique possimus? Pariatur, magnam.
-            Ad alias quas in iste quod veniam consequatur asperiores tempora obcaecati, numquam unde nisi voluptates labore id, deserunt omnis eaque odit accusantium, aut nam vel consectetur. Quibusdam molestiae blanditiis rem?
-            Nesciunt quidem ipsa repudiandae ut sunt cumque sequi dolorum id accusamus neque aliquam corrupti tempore facere, nulla asperiores provident libero. Soluta dolorum eum obcaecati assumenda, eos quisquam laudantium corporis quaerat?
-          </p>
-        </div>
-      </section>
-      <hr />
-      <footer>
-        <div className="logo1">ST<i className="fas fa-book-open"></i>DY HUB</div>
-        <div className="social_media">
-          <a href="#"><i className="fab fa-github-square"></i></a>
-          <a href="#"><i className="fab fa-linkedin-square"></i></a>
-          <a href="#"><i className="fab fa-instagram"></i></a>
-        </div>
-        <p>copyright &copy;2024</p>
-      </footer>
-    </div>
-  );
-}
+
 
 
 export default App;

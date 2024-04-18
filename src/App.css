@@ -8,7 +8,7 @@
 
 body {
   height: 100vh;
-  background: url('../public/assets/baground.jpg') no-repeat center center fixed;
+  background: url('images/baground.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
 }
@@ -75,7 +75,7 @@ nav a:hover {
 }
 
 .about_sec {
-  background: linear-gradient(to top, #030303, rgba(49, 7, 58, 0.87)), url('../public/assets/baground.jpg') no-repeat center center;
+  background: linear-gradient(to top, #030303, rgba(49, 7, 58, 0.87)), url('images/baground.jpg') no-repeat center center;
   background-size: cover;
   padding: 2rem;
   height: 70vh;
