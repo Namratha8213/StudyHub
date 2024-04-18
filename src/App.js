@@ -1,12 +1,15 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './App.css'; // Import your CSS file
 import UploadPage from './pages/Upload';
 import ThirdSemesterPage from './pages/Third';
 import FourthSemesterPage from './pages/Fourth';
 import FifthSemesterPage from './pages/Fifth';
 import HomePage from './pages/HomePage';
-
+import ContactForm from './components/ContactForm';
+import MarqueeLink from './components/MarqeeLink';
+import AboutSection from './components/AboutSection';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -15,10 +18,10 @@ function App() {
         <div className="nav_bar">
           <div className="logo"><i className="fas fa-book-open"></i>STUDY HUB</div>
           <nav>
-            <a href="#home"><i className="fa fa-home"></i>Home</a>
-            <a href="/upload"><i className="fa fa-cloud-upload"></i>Upload</a>
-            <a href="#study-material"><i className="fa fa-graduation-cap"></i>Study Material</a>
-            <a href="#contact"><i className="fa fa-users"></i>Contact</a>
+            <Link to="/"><i className="fa fa-home"></i>Home</Link>
+            <Link to="/upload"><i className="fa fa-cloud-upload"></i>Upload</Link>
+            <Link to="#study-material"><i className="fa fa-graduation-cap"></i>Study Material</Link>
+            <Link to="#contact"><i className="fa fa-users"></i>Contact</Link> {/* Updated to Link */}
           </nav>
         </div>
         <Routes>
@@ -35,43 +38,69 @@ function App() {
             <p>We try to provide the students with the latest and detailed notes for the purpose of examination and knowledge recap.</p>
             <div className="sem">
               <div className="sem_sec">
-                <a href="/third">3rd sem</a>
+                <Link to="/third">3rd sem</Link>
               </div>
               <div className="sem_sec">
-                <a href="/fourth">4th sem</a>
+                <Link to="/fourth">4th sem</Link>
               </div>
               <div className="sem_sec">
-                <a href="/fifth">5th sem</a>
+                <Link to="/fifth">5th sem</Link>
               </div>
               <div className="sem_sec">
-                <a href="">6th sem</a>
+                <Link to="">6th sem</Link>
               </div>
               <div className="sem_sec">
-                <a href="">7th sem</a>
+                <Link to="">7th sem</Link>
               </div>
               <div className="sem_sec">
-                <a href="">8th sem</a>
+                <Link to="">8th sem</Link>
               </div>
             </div>
           </div>
         </section>
         {/* Remaining sections and footer */}
         <hr />
-        <footer>
-          <div className="logo1">ST<i className="fas fa-book-open"></i>DY HUB</div>
-          <div className="social_media">
-            <a href="#"><i className="fab fa-github-square"></i></a>
-            <a href="#"><i className="fab fa-linkedin-square"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-          </div>
-          <p>copyright &copy;2024</p>
-        </footer>
       </div>
+      <section className="contact" id="contact">
+      <div className="form">
+        <div className="container">
+          <h2 className="heading">Get in Touch</h2>
+          <form action="contact.php" method="post">
+            <div className="row">
+              <div className="form-group">
+                <label htmlFor="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" placeholder="First name" required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Last name" required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="phone-number">Phone Number</label>
+                <input type="tel" id="phone-number" name="phone-number" placeholder="Phone number" required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email Address" required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Message"></textarea>
+              </div>
+              <button type="submit" className="submit-btn" id="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div className="form_img">
+        <img src="./images/contact.gif" alt="contact" />
+      </div>
+    </section>
+      <MarqueeLink/>
+      <AboutSection/>
+      <Footer/>
     </BrowserRouter>
   );
 }
-
-
-
 
 export default App;
